@@ -14,8 +14,8 @@ COPY requirements.txt .
 # Instalar dependencias de Python
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copiar código de la aplicación (asegúrate de que paste.txt se llame app.py)
-COPY app.py .
+# Copiar código de la aplicación y renombrarlo a app.py
+COPY index.py ./app.py
 
 # Exponer puerto
 EXPOSE 5000
